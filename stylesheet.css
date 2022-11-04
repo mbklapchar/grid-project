@@ -1,0 +1,125 @@
+* {
+    margin: 0;                         
+    padding: 0;
+}   
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+    color: orangered;
+}
+
+header {
+    background-color: lightblue;
+    border: 2px solid brown;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+
+.grid1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 1em;
+    margin-top: 20px;
+}
+
+.item {
+    border: 0.5px solid black;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 40px;
+    column-gap: 1em;;
+}
+
+footer {
+    margin-top: 40px;
+    clear: both;
+    background-color: lightblue;
+    border: 2px solid brown;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: blue;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    display: inline;
+    font-size: 20px;
+    margin: 10px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 3.5em;
+
+}
+
+nav ul {
+    max-height: 0em;                   /* Section containing navigation links should be collapsed until hamburger menu icon is toggled */
+     overflow: hidden;                  /* Content of collapsed section should be hidden */
+     transition: max-height 0.5s;
+}
+
+nav ul li a {
+    display: block;                    /* Links should be displayed as block (each link taking up its required space on a new line) */
+    padding: .75em 1.75em;             /* Set padding for each navigation link */
+    color: black;                       /* Set color for navigation links */
+    text-decoration: none; 
+    background-color: aquamarine;
+    border: 1px solid black;
+    margin: 10px;
+}    
+
+.menu-wrap {                             /* .menu-wrap contains all parts of our responsive navigation */
+    width: 100%;
+}  
+
+#checkbox {
+    display: none;                     /* Although the checkbox functionality is needed, we don't want to see the actual checkbox */
+}
+
+#checkbox:checked ~ nav ul {
+    max-height: 11em;                  /* When the checkbox is checked, expand the height of ul to reveal navigation */
+}
+
+
+/* Desktop */ @media (min-width: 768px) {
+
+    .menu-icon {
+        display: none;                /* Hide hamburger menu icon on larger screens */
+    }
+
+    nav {
+        position: relative;
+        top: -1em; 
+    }
+
+    nav ul {
+        max-height: 3em;           /* Adjust max-height to fit content horizontally rather than vertically */
+        padding: 15px 0;
+    }
+    nav ul li {
+        display: inline-block;        /* Display list items as an inline-block (on a single line) */
+        padding-left: 1em;            /* Add padding between horizontal links */
+    }
+
+}
